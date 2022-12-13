@@ -12,4 +12,3 @@ async def screenshot(domain : str, response_class=FileResponse):
     used_time = f"-{current_time.hour}-{current_time.minute}-{current_time.second}"
     os.system(f'wkhtmltoimage {domain} {domain}{used_time}.jpg')
     return FileResponse(f'{domain}{used_time}.jpg')
-
