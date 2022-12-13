@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap'); *{font-family: 'Dosis', sans-serif}</style>
+    <script>
+        function redirect(url){
+            url = "http://127.0.0.1:8000/screenshot/"+url;
+            alert(url);
+            window.location.href = url;
+        }
+    </script>
+    <title>Screenshot Generator</title>
+</head>
+<body class="bg-dark">
+    <!-- Start Navigation Bar -->
+    <nav class="navbar navbar-expand bg-primary">
+        <a class="navbar-brand text-light px-3" href="#">Screenshot Generator</a>
+    </nav>
+    <div class="container">
+        <h1 class="text-center text-light">Create your own <br/> <span class="text-info">Website Screenshot!</span></h1>
+        <h3 class="text-light">Enter Website Domain</h3>
+        <form>
+            <div class="form-group my-2">
+                <label for="inputDomain">Input Domain</label>
+                <input type="text" class="form-control" id="inputDomain" placeholder="Input domain here...">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="redirect(document.getElementById('inputDomain').value)">Search Screenshot</button>
+        </form>
+    </div>
+</body>
+</html>
